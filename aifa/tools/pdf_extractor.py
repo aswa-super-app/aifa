@@ -399,7 +399,7 @@ def classify_document_type(text: str) -> str:
     text_upper = text.upper()
 
     # Order matters — check more specific patterns first
-    if re.search(r"\bCEDIT NOTE\b|\bCREDIT NOTE\b|\bCN\b", text_upper):
+    if re.search(r"\bCREDIT NOTE\b|\bCN\b", text_upper):
         return "Credit Note"
     if re.search(
         r"CERTIFICATE OF TAKAFUL|CERTIFICATE OF INSURANCE|E-POLICY|EPOLICY",
